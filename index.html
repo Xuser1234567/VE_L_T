@@ -167,6 +167,15 @@
       flex-direction: column;
       gap: 1rem;
       align-items: center;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .contact h4 {
+      margin: 0.2rem 0;
+      font-weight: 600;
     }
 
     .contact a {
@@ -178,192 +187,69 @@
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
-      transition: all 0.4s ease;
+      transition: transform 0.4s ease;
       transform: scale(1);
-      box-shadow: 0 0 0 rgba(255, 90, 0, 0.6);
       user-select: none;
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     }
 
     .contact a:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 10px 3px rgba(255, 90, 0, 0.6);
     }
 
     .email {
-      background: #ff6600;
+      background: linear-gradient(45deg, rgb(66, 133, 244), rgb(219, 68, 55), rgb(244, 180, 0), rgb(15, 157, 88));
       color: white;
+      /* Google colors */
+      box-shadow: 0 0 15px 4px rgba(15, 157, 88, 0.7); /* greenish shadow */
     }
 
     .paypal {
-      background: #00457c;
+      background: rgb(0, 51, 102);
       color: #f0f8ff;
+      box-shadow: 0 0 15px 4px rgba(0, 51, 102, 0.7); /* dark blue shadow */
     }
 
     .twitter {
-      background: #000;
+      background: rgb(0, 0, 0);
       color: white;
+      box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.7); /* black shadow */
     }
 
     .instagram {
-      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+      background: linear-gradient(45deg, rgb(245, 133, 41), rgb(221, 42, 123), rgb(129, 52, 175), rgb(81, 91, 212));
       color: white;
+      box-shadow: 0 0 15px 4px rgba(129, 52, 175, 0.7); /* purple shadow */
     }
 
-    /* Comments Section */
-    #comments-section {
-      max-width: 600px;
-      margin: 3rem auto 1rem;
-      text-align: left;
-      font-family: 'Poppins', Arial, sans-serif;
-      background: var(--card-bg);
-      border-radius: 18px;
-      box-shadow: 0 12px 25px var(--card-shadow);
-      padding: 1.5rem 2rem;
-      color: var(--text-color);
-      transition: background 0.3s, color 0.3s;
-    }
-
-    #comments-section h2 {
-      color: #ff5300;
-      margin-top: 0;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    #comment-form textarea {
-      width: 100%;
-      padding: 10px;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      resize: vertical;
-      min-height: 80px;
-      font-family: 'Poppins', Arial, sans-serif;
-      transition: border-color 0.3s;
-    }
-
-    #comment-form textarea:focus {
-      border-color: #ff6600;
-      outline: none;
-    }
-
-    #comment-form button {
-      margin-top: 0.5rem;
-      padding: 0.7rem 1.2rem;
-      background: #ff6600;
-      color: #fff;
-      border: none;
-      border-radius: 30px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s;
-      user-select: none;
-    }
-
-    #comment-form button:hover {
-      background: #ff4a00;
-    }
-
-    #comment-form .char-count {
-      font-size: 0.85rem;
-      color: #666;
-      margin-top: 4px;
-      text-align: right;
-      font-family: monospace;
-      user-select: none;
-    }
-
-    #comments-list {
-      margin-top: 1rem;
-      max-height: 300px;
-      overflow-y: auto;
-      border-top: 1px solid #ddd;
-      padding-top: 1rem;
-    }
-
-    .comment {
-      padding: 10px;
-      border-bottom: 1px solid #eee;
-      white-space: pre-wrap;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .comment-text-time {
-      max-width: 85%;
-    }
-
-    .comment-text-time span.timestamp {
-      display: block;
-      font-size: 0.85rem;
-      color: #888;
-      margin-top: 3px;
-      font-style: italic;
-    }
-
-    .comment button.delete-btn {
-      background: #c0392b;
-      color: #fff;
-      border: none;
-      border-radius: 20px;
-      padding: 3px 9px;
-      cursor: pointer;
-      font-size: 0.8rem;
-      user-select: none;
-      flex-shrink: 0;
-      transition: background 0.3s;
-    }
-
-    .comment button.delete-btn:hover {
-      background: #922b21;
+    .youtube {
+      background: rgb(255, 0, 0);
+      color: white;
+      box-shadow: 0 0 15px 4px rgba(255, 0, 0, 0.7); /* red shadow */
     }
 
     footer {
+      margin-top: auto;
+      padding: 1rem 0;
       background: var(--footer-bg);
       color: var(--footer-text);
-      text-align: center;
-      font-size: 14px;
-      padding: 1.2rem 1rem;
-      letter-spacing: 0.05em;
-      flex-shrink: 0;
+      font-size: 0.9rem;
       user-select: none;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.5rem;
-      }
-
-      main {
-        margin: 2rem auto 0;
-        padding: 0 1rem;
-      }
-
-      .service-card {
-        padding: 1.6rem 1.8rem;
-      }
-
-      #comments-section {
-        padding: 1rem 1.2rem;
-        margin: 2rem auto;
-      }
     }
   </style>
 </head>
 
 <body>
-
   <header>
     <h1>VELT</h1>
     <div id="typed-text"></div>
-    <button id="darkModeToggle">🌙 Dark Mode</button>
+    <button id="darkModeToggle" aria-label="Toggle dark mode">🌙 Dark Mode</button>
   </header>
 
   <main>
-   
-
-	<!-- Currency toggle buttons -->
     <div class="price-toggle" role="radiogroup" aria-label="Currency toggle">
       <button data-currency="usd" class="active" aria-checked="true" role="radio" tabindex="0">USD</button>
       <button data-currency="sar" aria-checked="false" role="radio" tabindex="-1">SAR</button>
@@ -380,8 +266,8 @@
 
     <div class="service-card" data-price-usd="1" tabindex="0" aria-label="Logo Design service for $1 USD">
       <h3>🎨 Logo Design</h3>
-      <p>Custom, eye-catching logos designed to represent your brand — only <strong><span class="currency-symbol">$</span><span
-            class="price">1</span></strong>.</p>
+      <p>Custom, eye-catching logos designed to represent your brand — only <strong><span
+            class="currency-symbol">$</span><span class="price">1</span></strong>.</p>
     </div>
 
     <div class="service-card" data-price-usd="1" tabindex="0" aria-label="Thumbnail Design service for $1 USD">
@@ -390,31 +276,34 @@
             class="currency-symbol">$</span><span class="price">1</span></strong>.</p>
     </div>
 
-    <section class="contact">
+    <section class="contact" aria-label="Contact and social media links">
       <h4>📩 Contact us: velt.here.we.are@gmail.com</h4>
       <a href="mailto:velt.here.we.are@gmail.com" class="email" aria-label="Email us at velt.here.we.are@gmail.com">📧 Email
         Us</a>
 
       <h4>💰 PayPal: PayPal.me/VELT123</h4>
-      <a href="https://paypal.me/VELT123" class="paypal" target="_blank" rel="noopener noreferrer" aria-label="Pay via PayPal">💳 Pay
-        Now</a>
+      <a href="https://paypal.me/VELT123" class="paypal" target="_blank" rel="noopener noreferrer"
+        aria-label="Pay via PayPal">💳 Pay Now</a>
 
       <h4>🐦 X (Twitter): x.com/VE_L_T</h4>
-      <a href="https://x.com/VE_L_T" class="twitter" target="_blank" rel="noopener noreferrer" aria-label="Visit X Twitter">🖤
-        Visit X</a>
+      <a href="https://x.com/VE_L_T" class="twitter" target="_blank" rel="noopener noreferrer"
+        aria-label="Visit X Twitter">🖤 Visit X</a>
 
       <h4>📷 Instagram: instagram.com/ve_l_t</h4>
       <a href="https://www.instagram.com/ve_l_t/" class="instagram" target="_blank" rel="noopener noreferrer"
         aria-label="See Instagram profile">📸 See Instagram</a>
-    </section>
 
-    <br><br>
+      <h4>▶️ YouTube: youtube.com/@VE_L_T</h4>
+      <a href="https://www.youtube.com/@VE_L_T" class="youtube" target="_blank" rel="noopener noreferrer"
+        aria-label="Visit our YouTube channel">📺 Visit YouTube</a>
+    </section>
+  </main>
+
   <footer>
     &copy; 2025 VELT Creative Services. All rights reserved.
   </footer>
 
   <script>
-    // Dark mode toggle
     const toggleBtn = document.getElementById('darkModeToggle');
     const body = document.body;
 
@@ -432,7 +321,6 @@
       setDarkMode(true);
     }
 
-    // Typing animation in header
     const phrases = ["Video Editing.", "Logo Design.", "Thumbnails."];
     const typedText = document.getElementById("typed-text");
     let index = 0, charIndex = 0, currentPhrase = "";
@@ -464,7 +352,6 @@
       setTimeout(type, 1000);
     });
 
-    // Scroll fade-in for services
     const cards = document.querySelectorAll(".service-card");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -476,7 +363,6 @@
 
     cards.forEach(card => observer.observe(card));
 
-    // Currency toggle functionality
     document.addEventListener('DOMContentLoaded', () => {
       const rates = {
         usd: 1,
@@ -493,10 +379,9 @@
       const toggleButtons = document.querySelectorAll('.price-toggle button');
       const serviceCards = document.querySelectorAll('.service-card');
 
-      toggleButtons.forEach((btn, idx) => {
+      toggleButtons.forEach((btn) => {
         btn.addEventListener('click', () => {
-          // Accessibility: Update aria-checked & tabindex
-          toggleButtons.forEach((b, i) => {
+          toggleButtons.forEach((b) => {
             b.classList.remove('active');
             b.setAttribute('aria-checked', 'false');
             b.setAttribute('tabindex', '-1');
@@ -525,158 +410,6 @@
         });
       });
     });
-
-    // Comments Section with timestamps, delete, char count, validation
-    (function () {
-      const form = document.getElementById('comment-form');
-      const input = document.getElementById('comment-input');
-      const commentsList = document.getElementById('comments-list');
-      const charCount = document.getElementById('charCount');
-      const maxChars = 200;
-
-      // Load comments from localStorage or empty array
-      let comments = JSON.parse(localStorage.getItem('velt_comments')) || [];
-
-      // Save comments to localStorage
-      function saveComments() {
-        localStorage.setItem('velt_comments', JSON.stringify(comments));
-      }
-
-      // Format timestamp nicely
-      function formatTimestamp(ts) {
-        const d = new Date(ts);
-        return d.toLocaleString(undefined, {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-          hour: '2-digit',
-          minute: '2-digit'
-        });
-      }
-
-      // Render comments in the list
-      function renderComments() {
-        commentsList.innerHTML = '';
-        if (comments.length === 0) {
-          commentsList.innerHTML = '<p style="color:#666; text-align:center;">No comments yet. Be the first!</p>';
-          return;
-        }
-
-        comments.forEach((comment, i) => {
-          const div = document.createElement('div');
-          div.className = 'comment';
-          div.setAttribute('role', 'listitem');
-
-          const textTime = document.createElement('div');
-          textTime.className = 'comment-text-time';
-
-          const textSpan = document.createElement('span');
-          textSpan.textContent = comment.text;
-
-          const timeSpan = document.createElement('span');
-          timeSpan.className = 'timestamp';
-          timeSpan.textContent = formatTimestamp(comment.timestamp);
-
-          textTime.appendChild(textSpan);
-          textTime.appendChild(timeSpan);
-
-          const delBtn = document.createElement('button');
-          delBtn.className = 'delete-btn';
-          delBtn.textContent = 'Delete';
-          delBtn.setAttribute('aria-label', 'Delete this comment');
-          delBtn.addEventListener('click', () => {
-            if (confirm('Delete this comment?')) {
-              comments.splice(i, 1);
-              saveComments();
-              renderComments();
-            }
-          });
-
-          div.appendChild(textTime);
-          div.appendChild(delBtn);
-          commentsList.appendChild(div);
-        });
-      }
-
-      // Character count update
-      input.addEventListener('input', () => {
-        charCount.textContent = `${input.value.length} / ${maxChars}`;
-      });
-
-      // Handle new comment submit
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-        const val = input.value.trim();
-
-        if (!val) {
-          alert('Please write a comment!');
-          input.focus();
-          return;
-        }
-        if (val.length > maxChars) {
-          alert(`Comments can be at most ${maxChars} characters.`);
-          input.focus();
-          return;
-        }
-
-        comments.push({ text: val, timestamp: Date.now() });
-        saveComments();
-        renderComments();
-        input.value = '';
-        charCount.textContent = `0 / ${maxChars}`;
-      });
-
-      // Initial render
-      renderComments();
-    })();
-  (() => {
-  const couponInput = document.getElementById('coupon-input');
-  const applyBtn = document.getElementById('apply-coupon');
-  const message = document.getElementById('coupon-message');
-  const serviceCards = document.querySelectorAll('.service-card');
-
-  // Predefined coupons and discounts (percentage)
-  const coupons = {
-    'VELT10': 10,   // 10% off
-    'WELCOME15': 15,
-    'SAVE20': 20,
-  };
-
-  let activeDiscount = 0;
-
-  function applyDiscount(discountPercent) {
-    serviceCards.forEach(card => {
-      const basePriceUSD = parseFloat(card.dataset.priceUsd);
-      const discountedPrice = (basePriceUSD * (1 - discountPercent / 100)).toFixed(2);
-      const priceSpan = card.querySelector('.price');
-      const symbolSpan = card.querySelector('.currency-symbol');
-      if (priceSpan && symbolSpan) {
-        // Use current currency symbol (keep it)
-        priceSpan.textContent = discountedPrice;
-      }
-    });
-  }
-
-  applyBtn.addEventListener('click', () => {
-    const code = couponInput.value.trim().toUpperCase();
-    if (!code) {
-      message.textContent = 'Please enter a coupon code.';
-      message.style.color = '#c0392b';
-      return;
-    }
-    if (coupons.hasOwnProperty(code)) {
-      activeDiscount = coupons[code];
-      applyDiscount(activeDiscount);
-      message.textContent = `Success! You got ${activeDiscount}% off. 🎉`;
-      message.style.color = '#27ae60';
-    } else {
-      message.textContent = 'Invalid coupon code.';
-      message.style.color = '#c0392b';
-      // Optionally reset prices if needed here
-    }
-  });
-})();
-
   </script>
 </body>
 
