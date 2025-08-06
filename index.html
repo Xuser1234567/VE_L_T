@@ -411,6 +411,46 @@
       });
     });
   </script>
+
+<!-- Local video example (uncomment if you want to use local video) -->
+<!--
+<video class="top-left-video" autoplay muted loop playsinline>
+  <source src="video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+-->
+
+<!-- YouTube embed video -->
+<iframe
+  class="top-left-video"
+  width="250"
+  height="140"
+  src="https://www.youtube.com/embed/PZlGrO8t5Gg?autoplay=1&mute=1&loop=1&playlist=PZlGrO8t5Gg"
+  title="YouTube video player"
+  frameborder="0"
+  allow="autoplay; encrypted-media"
+  allowfullscreen
+></iframe>
+
+<style>
+  .top-left-video {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 250px;
+    height: auto;
+    z-index: 9999;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .top-left-video {
+      display: none;
+    }
+  }
+</style>
+
 </body>
 
 </html>
